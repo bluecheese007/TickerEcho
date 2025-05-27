@@ -1,0 +1,19 @@
+{
+  "name": "tickerecho",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.11.3",
+    "nuxt": "^3.10.1"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.1.1"
+  }
+}
