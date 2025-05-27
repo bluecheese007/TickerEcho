@@ -999,23 +999,6 @@ async function errorHandler(error, event) {
   // H3 will handle fallback
 }
 
-const script = `
-if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
-  Object.defineProperty(window, '__NUXT_DEVTOOLS_TIME_METRIC__', {
-    value: {},
-    enumerable: false,
-    configurable: true,
-  })
-}
-window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
-`;
-
-const _gxLBPfSKsdxVhKHoXUzD83acLMdvfgCHjO8BEX4srNk = (function(nitro) {
-  nitro.hooks.hook("render:html", (htmlContext) => {
-    htmlContext.head.push(`<script>${script}<\/script>`);
-  });
-});
-
 const rootDir = "/home/project";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
@@ -1105,8 +1088,7 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _gxLBPfSKsdxVhKHoXUzD83acLMdvfgCHjO8BEX4srNk,
-_kOOS7wTCq3rrmRFJgojYrQLxSHl76_K26OxuQvPET6o
+  _kOOS7wTCq3rrmRFJgojYrQLxSHl76_K26OxuQvPET6o
 ];
 
 const VueResolver = (_, value) => {
